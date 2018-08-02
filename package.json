@@ -1,0 +1,15 @@
+{
+  "name": "trellolaboratoria",
+  "version": "0.0.1",
+  "description": "replica trello ejercicio laboratoria",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "trello",
+    "laboratoria"
+  ],
+  "author": "nataly verdugo nogue",
+  "license": "ISC"
+}
