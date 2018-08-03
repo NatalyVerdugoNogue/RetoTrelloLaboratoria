@@ -1,0 +1,54 @@
+body {
+  background: blueviolet;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.imgLogo {
+  width: 5rem;
+}
+
+.btn-menu {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-image: none;
+  border-color: transparent;
+  border-radius: 2px;
+  width: 30px;
+}
+
+.btn-menu:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.btn-logo {
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+}
+
+.barra-menu {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-menu-tablero {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-image: none;
+  border-color: transparent;
+  border-radius: 2px;
+}
+
+.btn-menu-tablero:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 767px) {
+  .remove {
+    display: none;
+  }
+  .btn-menu-tablero {
+    width: 30px;
+  }
+}
