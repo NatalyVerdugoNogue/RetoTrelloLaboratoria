@@ -16,9 +16,9 @@ button {
   /* opacity: 0.7; */
 }
 
-.imgLogo:hover {
-  /* opacity: 1; */
-}
+/* .imgLogo:hover {
+  opacity: 1;
+} */
 
 .btn-gen {
   color: white;
@@ -126,7 +126,7 @@ button {
 
 .formList {
   width: 16.5rem;
-  background: #e9ecef;
+  background: #e2e4e6;
   border-radius: 4px;
 }
 
@@ -134,8 +134,28 @@ button {
   border: 1px solid #169ee2;
 }
 
-.form-fond-size {
+.form-font-size {
   font-size: 14px;
+}
+
+.btn-card {
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+}
+
+.btn-font-card {
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+.btn-font-card:hover {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: underline;
+}
+
+.btn-card-hover:hover {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 767px) {
