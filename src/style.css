@@ -1,6 +1,6 @@
 body {
-  /* background: url(img/mural-fotok.jpg)no-repeat; */
-  background: blueviolet;
+  background: url(img/mural-fotok.jpg)no-repeat;
+  /* background: blueviolet; */
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -118,6 +118,20 @@ button {
 
 .btn-list:hover {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.formList {
+  width: 16.5rem;
+  background: #e9ecef;
+  border-radius: 4px;
+}
+
+.form-input {
+  border: 1px solid #169ee2;
+}
+
+.form-fond-size {
+  font-size: 14px;
 }
 
 @media (max-width: 767px) {
