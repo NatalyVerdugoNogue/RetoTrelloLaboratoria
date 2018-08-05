@@ -13,3 +13,7 @@ window.controller.formOtherListTitle = () => {
   let titleOtherList = window.model.titleOtherList();
   window.view.formOtherListTitle(titleOtherList);
 }
+
+window.controller.addCard = () => {
+  window.view.addCard();
+};

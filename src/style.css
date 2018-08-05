@@ -158,6 +158,13 @@ button {
   background: rgba(0, 0, 0, 0.1);
 }
 
+.textarea-card {
+  overflow: hidden;
+  resize: none;
+  border-radius: 4px;
+  border: 0;
+}
+
 @media (max-width: 767px) {
   .remove {
     display: none;

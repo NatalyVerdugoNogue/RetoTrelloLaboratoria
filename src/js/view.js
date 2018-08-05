@@ -6,7 +6,7 @@ window.view.formList = () => {
     `<div class="col pl-2" id="closeList">
       <form class="formList p-1">
         <div class="form-group mb-1">
-          <input type="text" class="form-control form-fond-size form-input" placeholder="Introduzca el título de la lista..." id="getTitleList">
+          <input type="text" class="form-control form-font-size form-input" placeholder="Introduzca el título de la lista..." id="getTitleList">
         </div>
         <div class="row mx-0">
           <div class="col-auto px-0">
@@ -47,12 +47,14 @@ window.view.formListTitle = (titleList) => {
               </button>
             </div>
           </div>
-          <div class="row mx-0">
-            <div class="col-12 px-0 btn-card-hover">
-              <button type="button" class="btn form-font-size btn-card btn-font-card">
-                <i class="fas fa-plus"></i>
-                <span class="">Añada una tarjeta</span>
-              </button>
+          <div class="row mx-0"  id="addCard">
+            <div class="row mx-0">
+              <div class="col-12 px-0 btn-card-hover">
+                <button type="button" class="btn form-font-size btn-card btn-font-card" onclick="window.view.addCard()">
+                  <i class="fas fa-plus"></i>
+                  <span class="">Añada una tarjeta</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -62,7 +64,7 @@ window.view.formListTitle = (titleList) => {
     <div class="col pl-2 pr-0" id="otherList">
       <form class="formList p-1">
         <div class="form-group mb-1">
-          <input type="text" class="form-control form-fond-size form-input" placeholder="Introduzca el título de la lista..." id="getOtherTitleList">
+          <input type="text" class="form-control form-font-size form-input" placeholder="Introduzca el título de la lista..." id="getOtherTitleList">
         </div>
         <div class="row mx-0">
           <div class="col-auto px-0">
@@ -93,7 +95,7 @@ window.view.addOtherList = () => {
     `<div class="col pl-2 pr-0" id="otherList">
       <form class="formList p-1">
         <div class="form-group mb-1">
-          <input type="text" class="form-control form-fond-size form-input" placeholder="Introduzca el título de la lista..." id="getOtherTitleList">
+          <input type="text" class="form-control form-font-size form-input" placeholder="Introduzca el título de la lista..." id="getOtherTitleList">
         </div>
         <div class="row mx-0">
           <div class="col-auto px-0">
@@ -135,5 +137,29 @@ window.view.formOtherListTitle = (titleOtherList) => {
           </div>
         </div>
       </form>
+    </div>`;
+};
+
+
+window.view.addCard = () => {
+  let divAddCard = document.getElementById('addCard');
+  divAddCard.innerHTML =
+    `<div class="col-12 px-2">
+      <textarea name="TitleCard" id="" class="form-font-size textarea-card p-1" cols="28" rows="3" placeholder="Introduzca un título para esta tarjeta..."></textarea>
+    </div>
+    <div class="row mx-0">
+      <div class="col-auto px-2 pb-2">
+        <button type="button" class="btn btn-success form-font-size font-weight-bold py-1" onclick="">Añadir tarjeta</button>
+      </div>
+      <div class="col-auto pl-1 pt-1" style="margin-right: 62px">
+        <button type="button" class="close" onclick="">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="col-auto p-0">
+        <button type="button" class="btn-card btn-font-card btn-card-hover">
+          <i class="fas fa-ellipsis-h"></i>
+        </button>
+      </div>
     </div>`;
 };
