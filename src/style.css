@@ -89,8 +89,12 @@ button {
   border-color: transparent;
 }
 
-.line {
+/* .line {
   border-right: 1px solid rgba(255, 255, 255, 0.6);
+} */
+
+.span-line {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .title {
@@ -148,7 +152,7 @@ button {
 
 @media (width: 425px) {
   .marr {
-    margin-right: 59px;
+    margin-right: 43px;
   }
 }
 
@@ -160,7 +164,7 @@ button {
 
 @media (max-width: 320px) {
   .marsmall {
-    margin-right: 55px;
+    margin-right: 103px;
   }
   .marsmallleft {
     margin-left: 20px;
