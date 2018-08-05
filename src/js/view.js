@@ -48,13 +48,11 @@ window.view.formListTitle = (titleList) => {
             </div>
           </div>
           <div class="row mx-0"  id="addCard">
-            <div class="row mx-0">
-              <div class="col-12 px-0 btn-card-hover">
-                <button type="button" class="btn form-font-size btn-card btn-font-card" onclick="window.view.addCard()">
-                  <i class="fas fa-plus"></i>
-                  <span class="">Añada una tarjeta</span>
-                </button>
-              </div>
+            <div class="col-12 px-0 btn-card-hover">
+              <button type="button" class="btn form-font-size btn-card btn-font-card" onclick="window.view.addCard()">
+                <i class="fas fa-plus"></i>
+                <span class="">Añada una tarjeta</span>
+              </button>   
             </div>
           </div>
         </div>
@@ -144,12 +142,14 @@ window.view.formOtherListTitle = (titleOtherList) => {
 window.view.addCard = () => {
   let divAddCard = document.getElementById('addCard');
   divAddCard.innerHTML =
-    `<div class="col-12 px-2">
-      <textarea name="TitleCard" id="" class="form-font-size textarea-card p-1" cols="28" rows="3" placeholder="Introduzca un título para esta tarjeta..."></textarea>
+    `<div class="col-12 px-2" id="addTextCard">
+    </div>
+    <div class="col-12 px-2">
+      <textarea name="TitleCard" id="firstCard" class="form-font-size textarea-card p-1" cols="28" rows="3" placeholder="Introduzca un título para esta tarjeta..."></textarea>
     </div>
     <div class="row mx-0">
       <div class="col-auto px-2 pb-2">
-        <button type="button" class="btn btn-success form-font-size font-weight-bold py-1" onclick="">Añadir tarjeta</button>
+        <button type="button" class="btn btn-success form-font-size font-weight-bold py-1" onclick="window.controller.addCard()">Añadir tarjeta</button>
       </div>
       <div class="col-auto pl-1 pt-1" style="margin-right: 62px">
         <button type="button" class="close" onclick="">
@@ -163,3 +163,11 @@ window.view.addCard = () => {
       </div>
     </div>`;
 };
+
+window.view.addNewCard = (textCard) => {
+  let divAddCard = document.getElementById('addTextCard');
+  divAddCard.innerHTML =
+    `<div class="col-12 p-2 textarea-card my-2 p-1 card-hover">
+      <span class="form-font-size">${textCard}</span>
+    </div>`;
+}

@@ -15,5 +15,6 @@ window.controller.formOtherListTitle = () => {
 }
 
 window.controller.addCard = () => {
-  window.view.addCard();
+  let textCard = window.model.textCard();
+  window.view.addNewCard(textCard);
 };

@@ -163,6 +163,11 @@ button {
   resize: none;
   border-radius: 4px;
   border: 0;
+  background: #fff;
+}
+
+.card-hover:hover {
+  background: #e9ecef;
 }
 
 @media (max-width: 767px) {
