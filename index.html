@@ -17,48 +17,100 @@
 
 <body>
 
-  <div class="row barra-menu">
-    <div class="col-3 col-md-3">
-      <div class="row">
-        <div class="col-6 py-1 pl-3 pr-1 col-md-4">
-          <button type="button" class="btn-menu-tablero">
+  <!-- primera barra menu -->
+  <div class="row mx-0 barra-menu">
+    <div class="col-auto pr-0 pl-0">
+      <div class="row mx-0">
+        <div class="col py-1 pr-0 pl-1 text-center">
+          <button type="button" class="btn-gen btn-menu-tablero">
             <i class="fab fa-trello"></i>
-            <span class="remove">Tableros</span>
+            <span class="remove font-weight-bold text-tab">Tableros</span>
           </button>
         </div>
-        <div class="col-6 p-1 col-md-8 ">
+        <div class="col-auto py-1 pr-0 pl-1 text-right">
           <div class="input-group">
-            <input type="text" class="form-control btn-menu remove" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+            <input type="text" class="form-control btn-gen btn-menu remove btn-input" placeholder="" aria-label="Example text with button addon"
+              aria-describedby="button-addon1">
             <div class="input-group-prepend">
-              <button class="btn-menu" type="button" id="button-addon1">
+              <button class="btn-gen btn-search" type="button" id="button-addon1">
                 <i class="fas fa-search"></i>
               </button>
             </div>
-
           </div>
         </div>
       </div>
     </div>
 
-    <div class="col-4 py-1 col-md-7 text-center">
+    <div class="col py-1 px-0 text-center">
       <button type="button" class="btn-logo ">
         <img src="src/img/Trello_logo.png" class="rounded mx-auto d-block imgLogo" alt="logo Trello">
       </button>
     </div>
-    <div class="col-5 py-1 pr-1 col-md-2 pr-md-4 text-right ">
-      <button type="button" class="btn-menu">
+
+    <div class="col-auto py-1 pr-1 pl-1 text-right">
+      <button type="button" class="btn-gen btn-menu">
         <i class="fas fa-plus"></i>
       </button>
-      <button type="button" class="btn-menu">
+      <button type="button" class="btn-gen btn-menu remove">
         <i class="fas fa-info"></i>
       </button>
-      <button type="button" class="btn-menu">
+      <button type="button" class="btn-gen btn-menu mr-1">
         <i class="far fa-bell"></i>
+      </button>
+      <img src="src/img/avatar.jpg" class="rounded-circle float-right img-avatar" alt="avatar">
+    </div>
+  </div>
+
+  <!-- segunda barra menu -->
+
+  <div class="row mx-0 py-2">
+    <div class="col-auto pl-md-2">
+      <button type="button" class="btn-trans">
+        <span class="font-weight-bold title">Prueba trello</span>
+      </button>
+    </div>
+    <div class="col-auto px-0 py-1">
+      <button type="button" class="btn-trans pr-md-3 line marsmall">
+        <i class="far fa-star icon-size"></i>
+      </button>
+    </div>
+    <div class="col-auto px-0 py-1">
+      <button type="button" class="btn-trans pr-md-3 line marsmallleft">
+        <span class="">Personal</span>
+      </button>
+    </div>
+    <div class="col-auto px-0 py-1">
+      <button type="button" class="btn-trans pr-md-3 line marr">
+        <i class="fas fa-lock icon-size"></i>
+        <span class="">Privado</span>
+      </button>
+    </div>
+    <div class="col-auto pr-0 pl-md-0">
+      <button type="button" class="btn-circle-img rounded-circle">
+        <img src="src/img/avatar.jpg" class="rounded-circle img-avatar" alt="avatar">
+      </button>
+    </div>
+    <div class="col-auto px-0 py-1 mr-auto">
+      <button type="button" class="btn-gen img-avatar rounded-circle">
+        <i class="fas fa-user-plus icon-size"></i>
+      </button>
+    </div>
+    <div class="col-auto px-0 py-1">
+      <button type="button" class="btn-trans marsmallleft-2">
+        <span>... </span>
+        <span class="text-line">Mostrar menú</span>
       </button>
     </div>
   </div>
 
-
+  <div class="row mx-0">
+    <div class="col pl-2">
+      <button type="button" class="btn-list text-left pl-3">
+        <i class="fas fa-plus"></i>
+        <span class="">Añada una lista</span>
+      </button>
+    </div>
+  </div>
 
   <script src="src/js/model.js"></script>
   <script src="src/js/view.js"></script>
