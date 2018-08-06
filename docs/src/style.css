@@ -13,12 +13,12 @@ button {
 
 .imgLogo {
   width: 5rem;
-  /* opacity: 0.7; */
+  opacity: 0.7;
 }
 
-/* .imgLogo:hover {
+.imgLogo:hover {
   opacity: 1;
-} */
+}
 
 .btn-gen {
   color: white;
@@ -58,6 +58,10 @@ button {
 .img-avatar {
   width: 30px;
   height: 30px;
+}
+
+.img-avatar:hover {
+  opacity: 0.7;
 }
 
 .text-tab {
