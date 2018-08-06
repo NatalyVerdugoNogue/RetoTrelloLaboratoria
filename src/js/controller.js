@@ -5,12 +5,14 @@ window.controller.formList = () => {
 };
 
 window.controller.formListTitle = () => {
-  let titleList = window.model.titleList();
+  titleList = document.getElementById('getTitleList').value;
+  window.model.titleList(titleList);
   window.view.formListTitle(titleList);
 };
 
 window.controller.formOtherListTitle = () => {
-  let titleOtherList = window.model.titleOtherList();
+  titleOtherList = document.getElementById('getOtherTitleList').value;
+  window.model.titleOtherList(titleOtherList);
   window.view.formOtherListTitle(titleOtherList);
 }
 

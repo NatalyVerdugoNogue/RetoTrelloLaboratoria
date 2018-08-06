@@ -1,7 +1,6 @@
 window.model = {};
 
-window.model.titleList = () => {
-  titleList = document.getElementById('getTitleList').value;
+window.model.titleList = (titleList) => {
   if (titleList.length > 0) {
     return titleList
   } else {
@@ -9,8 +8,7 @@ window.model.titleList = () => {
   };
 };
 
-window.model.titleOtherList = () => {
-  titleOtherList = document.getElementById('getOtherTitleList').value;
+window.model.titleOtherList = (titleOtherList) => {
   if (titleOtherList.length > 0) {
     return titleOtherList
   } else {
