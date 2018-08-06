@@ -15,3 +15,9 @@ window.model.textCard = () => {
   document.getElementById('firstCard').value = '';
   return textCard
 }
+
+window.model.spanCard = () => {
+  spanCard = document.getElementById('spanText').value;
+  console.log(spanCard);
+  return spanCard
+}

@@ -170,6 +170,17 @@ button {
   background: #e9ecef;
 }
 
+.scroll {
+  overflow-x: overlay;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.card {
+  display: inline-block;
+  background: transparent
+}
+
 @media (max-width: 767px) {
   .remove {
     display: none;

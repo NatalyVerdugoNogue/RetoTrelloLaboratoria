@@ -34,7 +34,7 @@ window.view.closeList = () => {
 window.view.formListTitle = (titleList) => {
   let divFormTitle = document.getElementById('formList');
   divFormTitle.innerHTML =
-    `<div class="col-auto pl-2 pr-0">
+    `<div class="col-auto p-0 card ml-2">
       <form class="formList">
         <div class="form-group mb-1">
           <div class="row mx-0 p-1">
@@ -59,7 +59,7 @@ window.view.formListTitle = (titleList) => {
       </form>
     </div>
 
-    <div class="col pl-2 pr-0" id="otherList">
+    <div class="col p-0 card ml-2" id="otherList">
       <form class="formList p-1">
         <div class="form-group mb-1">
           <input type="text" class="form-control form-font-size form-input" placeholder="Introduzca el título de la lista..." id="getOtherTitleList">
@@ -90,7 +90,7 @@ window.view.closeOtherList = () => {
 window.view.addOtherList = () => {
   let divOtherList = document.getElementById('otherList');
   divOtherList.innerHTML =
-    `<div class="col pl-2 pr-0" id="otherList">
+    `<div class="col p-0 card ml-2" id="otherList">
       <form class="formList p-1">
         <div class="form-group mb-1">
           <input type="text" class="form-control form-font-size form-input" placeholder="Introduzca el título de la lista..." id="getOtherTitleList">
@@ -112,7 +112,7 @@ window.view.addOtherList = () => {
 window.view.formOtherListTitle = (titleOtherList) => {
   let divFormOtherTitle = document.getElementById('otherList');
   divFormOtherTitle.innerHTML =
-    `<div class="col-auto pl-2 pr-0">
+    `<div class="col-auto p-0 card ml-2">
       <form class="formList">
         <div class="form-group mb-1">
           <div class="row mx-0 p-1">
@@ -144,22 +144,24 @@ window.view.addCard = () => {
   divAddCard.innerHTML =
     `<div class="col-12 px-2" id="addTextCard">
     </div>
-    <div class="col-12 px-2">
-      <textarea name="TitleCard" id="firstCard" class="form-font-size textarea-card p-1" cols="28" rows="3" placeholder="Introduzca un título para esta tarjeta..."></textarea>
-    </div>
-    <div class="row mx-0">
-      <div class="col-auto px-2 pb-2">
-        <button type="button" class="btn btn-success form-font-size font-weight-bold py-1" onclick="window.controller.addCard()">Añadir tarjeta</button>
+    <div class="col-12 p-0" id="closeOtherCard">
+      <div class="col-12 px-2">
+        <textarea name="TitleCard" id="firstCard" class="form-font-size textarea-card p-1" cols="28" rows="3" placeholder="Introduzca un título para esta tarjeta..."></textarea>
       </div>
-      <div class="col-auto pl-1 pt-1" style="margin-right: 62px">
-        <button type="button" class="close" onclick="">
-          <span>&times;</span>
-        </button>
-      </div>
-      <div class="col-auto p-0">
-        <button type="button" class="btn-card btn-font-card btn-card-hover">
-          <i class="fas fa-ellipsis-h"></i>
-        </button>
+      <div class="row mx-0">
+        <div class="col-auto px-2 pb-2">
+          <button type="button" class="btn btn-success form-font-size font-weight-bold py-1" onclick="window.controller.addCard()">Añadir tarjeta</button>
+        </div>
+        <div class="col-auto pl-1 pt-1" style="margin-right: 62px">
+          <button type="button" class="close" onclick="window.view.otherCard()">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="col-auto p-0">
+          <button type="button" class="btn-card btn-font-card btn-card-hover">
+            <i class="fas fa-ellipsis-h"></i>
+          </button>
+        </div>
       </div>
     </div>`;
 };
@@ -168,6 +170,68 @@ window.view.addNewCard = (textCard) => {
   let divAddCard = document.getElementById('addTextCard');
   divAddCard.innerHTML =
     `<div class="col-12 p-2 textarea-card my-2 p-1 card-hover">
-      <span class="form-font-size">${textCard}</span>
+      <button class="form-font-size btn-card" id="spanText">${textCard}</button>
     </div>`;
 }
+
+window.view.otherCard = () => {
+  let divAddCard = document.getElementById('closeOtherCard');
+  divAddCard.innerHTML =
+    `<div class="col-12 p-0">
+      <button type="button" class="btn-list text-left" onclick="window.view.newCard()">
+        <i class="fas fa-plus"></i>
+        <span class="">Añada otra tarjeta</span>
+      </button>
+    </div>`;
+}
+
+window.view.spanCard = (spanCard) => {
+  let divSpanCard = document.getElementById('addCard');
+  divSpanCard.innerHTML =
+    `<div class="col-12 px-2">
+  <span class="form-font-size">${spanCard}</span>
+  </div>
+  <div class="col-12 p-0" id="closeOtherCard">
+    <div class="col-12 px-2">
+      <textarea name="TitleCard" id="firstCard" class="form-font-size textarea-card p-1" cols="28" rows="3" placeholder="Introduzca un título para esta tarjeta..."></textarea>
+    </div>
+    <div class="row mx-0">
+      <div class="col-auto px-2 pb-2">
+        <button type="button" class="btn btn-success form-font-size font-weight-bold py-1" onclick="window.controller.addCard()">Añadir tarjeta</button>
+      </div>
+      <div class="col-auto pl-1 pt-1" style="margin-right: 62px">
+        <button type="button" class="close" onclick="window.view.otherCard()">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="col-auto p-0">
+        <button type="button" class="btn-card btn-font-card btn-card-hover">
+          <i class="fas fa-ellipsis-h"></i>
+        </button>
+      </div>
+    </div>
+  </div>`
+};
+
+window.view.newCard = () => {
+  let divAddCard = document.getElementById('closeOtherCard');
+  divAddCard.innerHTML =
+    `<div class="col-12 px-2">
+      <textarea name="TitleCard" id="firstCard" class="form-font-size textarea-card p-1" cols="28" rows="3" placeholder="Introduzca un título para esta tarjeta..."></textarea>
+    </div>
+    <div class="row mx-0">
+      <div class="col-auto px-2 pb-2">
+        <button type="button" class="btn btn-success form-font-size font-weight-bold py-1" onclick="window.controller.addCard()">Añadir tarjeta</button>
+      </div>
+      <div class="col-auto pl-1 pt-1" style="margin-right: 62px">
+        <button type="button" class="close" onclick="window.view.otherCard()">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="col-auto p-0">
+        <button type="button" class="btn-card btn-font-card btn-card-hover">
+          <i class="fas fa-ellipsis-h"></i>
+        </button>
+      </div>
+    </div>`
+};
