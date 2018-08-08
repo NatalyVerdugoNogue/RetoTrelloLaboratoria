@@ -1,31 +1,42 @@
 window.model = {};
 
-window.model.titleList = () => {
-  titleList = document.getElementById('getTitleList').value;
-  if (titleList.length > 0) {
-    return titleList
-  } else {
-    window.controller.formListTitle();
+
+window.model.getList = () => {
+  const firestore = firebase.firestore();
+  const settings = { /* your settings... */
+    timestampsInSnapshots: true
   };
+  firestore.settings(settings);
+  return firestore.collection("list").orderBy('date', 'asc').get().then((collList) => {
+    if (collList.docs.length === 0) {
+      window.view.initCero();
+    } else { return collList; }
+  });
 };
 
-window.model.titleOtherList = () => {
-  titleOtherList = document.getElementById('getOtherTitleList').value;
-  if (titleOtherList.length > 0) {
-    return titleOtherList
-  } else {
-    window.controller.formOtherListTitle();
+
+window.model.addList = (titleList) => {
+  const firestore = firebase.firestore();
+  const settings = { /* your settings... */
+    timestampsInSnapshots: true
   };
-};
+  firestore.settings(settings);
+
+  firestore.collection("list").add({
+    title: titleList,
+    date: new Date()
+  })
+    .then((docRef) => {
+      console.log("Document written with ID: ", docRef.id);
+    })
+    .catch((error) => {
+      console.error("Error adding document: ", error);
+    });
+}
+
 
 window.model.textCard = () => {
   textCard = document.getElementById('firstCard').value;
   document.getElementById('firstCard').value = '';
   return textCard
-};
-
-window.model.spanCard = () => {
-  spanCard = document.getElementById('spanText').value;
-  console.log(spanCard);
-  return spanCard
 };
