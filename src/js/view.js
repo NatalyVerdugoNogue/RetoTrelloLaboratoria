@@ -235,3 +235,132 @@ window.view.newCard = () => {
       </div>
     </div>`
 };
+
+
+// window.view = {};
+
+// window.view.formList = () => {
+//   const cont = 0;
+//   let divForm = document.getElementById('formList');
+//   divForm.innerHTML =
+//     `<div class="row mx-0 scroll" id="List"> 
+//       <div class="col pl-2" id="closeList">
+//         <form class="formList p-1">
+//           <div class="form-group mb-1">
+//             <input type="text" class="form-control form-font-size form-input" placeholder="Introduzca el título de la lista..." id="getTitleList">
+//           </div>
+//           <div class="row mx-0">
+//             <div class="col-auto px-0">
+//               <button type="button" class="btn btn-success form-font-size font-weight-bold py-1" onclick="window.controller.formListTitle('${cont}')">Añadir lista</button>
+//             </div>
+//             <div class="col-auto pt-2">
+//               <button type="button" class="close" onclick="window.view.closeList()">
+//                 <span>&times;</span>
+//               </button>
+//             </div>
+//           </div>
+//         </form>
+//       </div>
+//     </div>`;
+// };
+
+// window.view.formListTitle = (titleList, cont) => {
+//   let divFormTitle = document.getElementById('List');
+//   divFormTitle.innerHTML =
+//     `<div class="col-auto p-0 card ml-2">
+//       <form class="formList">
+//         <div class="form-group mb-1">
+//           <div class="row mx-0 p-1">
+//             <div class="col-auto px-0 mr-auto">
+//               <button class="form-font-size btn-card p-1 font-weight-bold" id="addTitleList">${titleList}</button>
+//             </div>
+//             <div class="col-auto p-0">
+//               <button type="button" class="btn-card btn-font-card btn-card-hover">
+//                 <i class="fas fa-ellipsis-h"></i>
+//               </button>
+//             </div>
+//           </div>
+//           <div class="row mx-0" id="addCard">
+//             <div class="col-12 px-0 btn-card-hover">
+//               <button type="button" class="btn form-font-size btn-card btn-font-card" onclick="window.view.addCard()">
+//                 <i class="fas fa-plus"></i>
+//                 <span class="">Añada una tarjeta</span>
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       </form>
+//     </div>
+    
+//     <div class="" id="a${cont}">
+//       <div class="col p-0 card ml-2" id="otherList">
+//         <form class="formList p-1">
+//           <div class="form-group mb-1">
+//             <input type="text" class="form-control form-font-size form-input" placeholder="Introduzca el título de la lista..." id="title${cont}">
+//           </div>
+//           <div class="row mx-0">
+//             <div class="col-auto px-0">
+//               <button type="button" class="btn btn-success form-font-size font-weight-bold py-1" onclick="window.controller.othersList('${cont}')">Añadir lista</button>
+//             </div>
+//             <div class="col-auto pt-2">
+//               <button type="button" class="close" onclick="window.view.closeOtherList()">
+//                 <span>&times;</span>
+//               </button>
+//             </div>
+//           </div>
+//         </form>
+//       </div>
+//     </div>`;
+// };
+
+// window.view.otherList = (titleList, cont) => {
+//   let divFormTitle = document.getElementById(`a${cont}`);
+//   console.log(divFormTitle);
+
+//   divFormTitle.innerHTML =
+//     `<div class="col-auto p-0 card ml-2">
+//       <form class="formList">
+//         <div class="form-group mb-1">
+//           <div class="row mx-0 p-1">
+//             <div class="col-auto px-0 mr-auto">
+//               <button class="form-font-size btn-card p-1 font-weight-bold">${titleList}</button>
+//             </div>
+//             <div class="col-auto p-0">
+//               <button type="button" class="btn-card btn-font-card btn-card-hover">
+//                 <i class="fas fa-ellipsis-h"></i>
+//               </button>
+//             </div>
+//           </div>
+//           <div class="row mx-0" id="addCard">
+//             <div class="col-12 px-0 btn-card-hover">
+//               <button type="button" class="btn form-font-size btn-card btn-font-card" onclick="window.view.addCard()">
+//                 <i class="fas fa-plus"></i>
+//                 <span class="">Añada una tarjeta</span>
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//       </form>
+//     </div>
+
+
+//     <div class="" id="a${cont + 1}">
+//       <div class="col p-0 card ml-2" id="otherList">
+//         <form class="formList p-1">
+//           <div class="form-group mb-1">
+//             <input type="text" class="form-control form-font-size form-input" placeholder="Introduzca el título de la lista..." id="title${cont + 1}">
+//           </div>
+//           <div class="row mx-0">
+//             <div class="col-auto px-0">
+//               <button type="button" class="btn btn-success form-font-size font-weight-bold py-1" onclick="window.controller.othersList('${cont + 1}')">Añadir lista</button>
+//             </div>
+//             <div class="col-auto pt-2">
+//               <button type="button" class="close" onclick="window.view.closeOtherList()">
+//                 <span>&times;</span>
+//               </button>
+//             </div>
+//           </div>
+//         </form>
+//       </div>
+//     </div>`;
+// };

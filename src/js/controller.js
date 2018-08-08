@@ -18,3 +18,30 @@ window.controller.addCard = () => {
   let textCard = window.model.textCard();
   window.view.addNewCard(textCard);
 };
+
+// window.controller = {};
+
+// window.controller.formList = () => {
+//   window.view.formList();
+// };
+
+// window.controller.formListTitle = (cont) => {
+//   let titleList = window.model.titleList(cont);
+//   window.view.formListTitle(titleList, cont);
+
+// };
+
+// window.controller.othersList = (cont) => {
+//   let titleList = window.model.otherTitleList(cont);
+//   window.view.otherList(titleList, cont);
+
+// }
+// window.controller.formOtherListTitle = () => {
+//   let titleOtherList = window.model.titleOtherList();
+//   window.view.formOtherListTitle(titleOtherList);
+// }
+
+// window.controller.addCard = () => {
+//   let textCard = window.model.textCard();
+//   window.view.addNewCard(textCard);
+// };
