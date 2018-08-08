@@ -15,6 +15,7 @@
   "dependencies": {
     "chai": "^4.1.2",
     "chai-dom": "^1.8.0",
+    "firebase": "^5.3.1",
     "mocha": "^5.2.0"
   }
 }
