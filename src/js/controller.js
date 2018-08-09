@@ -23,3 +23,14 @@ window.controller.addCard = () => {
   let textCard = window.model.textCard();
   window.view.addNewCard(textCard);
 };
+
+
+window.controller.addCard = (id, nc) => {
+  window.view.addCard(id, nc);
+};
+
+
+window.controller.dataCard = (id, ncid) => {
+  window.model.addCard(id, ncid);
+  window.model.getCard(id, ncid);
+}

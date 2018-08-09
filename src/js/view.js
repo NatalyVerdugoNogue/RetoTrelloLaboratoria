@@ -5,6 +5,7 @@ window.view.formListTitle = () => {
   const wallList = window.controller.getDataList();
 
   let htmlList = '';
+  const numCar = 0;
 
   wallList.then(docs => {
     docs.forEach(doc => {
@@ -15,7 +16,7 @@ window.view.formListTitle = () => {
             <div class="form-group mb-1">
               <div class="row mx-0 p-1">
                 <div class="col-auto px-0 mr-auto">
-                  <button class="form-font-size btn-card p-1 font-weight-bold" id="${doc.id}">${name.title}</button>
+                  <button class="form-font-size btn-card p-1 font-weight-bold" >${name.title}</button>
                 </div>
                 <div class="col-auto p-0">
                   <button type="button" class="btn-card btn-font-card btn-card-hover">
@@ -23,11 +24,11 @@ window.view.formListTitle = () => {
                   </button>
                 </div>
               </div>
-              <div class="row mx-0"  id="addCard">
+              <div class="row mx-0"  id="a${doc.id}">
                 <div class="col-12 px-0 btn-card-hover">
-                  <button type="button" class="btn form-font-size btn-card btn-font-card" onclick="window.view.addCard()">
+                  <button type="button" class="btn form-font-size btn-card btn-font-card" onclick="window.controller.addCard('${doc.id}','${numCar}')">
                     <i class="fas fa-plus"></i>
-                    <span class="">Añada una tarjeta</span>
+                    <span>Añada una tarjeta</span>
                   </button>   
                 </div>
               </div>
@@ -65,7 +66,7 @@ window.view.initCero = () => {
     `<div class="col pl-2">
     <button type="button" class="btn-list text-left pl-3" onclick="window.view.addFirstList()">
       <i class="fas fa-plus"></i>
-      <span class="">Añada una lista</span>
+      <span>Añada una lista</span>
     </button>
   </div>`;
 };
@@ -99,7 +100,7 @@ window.view.closeOtherList = () => {
   divFormOtherTitle.innerHTML =
     `<button type="button" class="btn-list text-left pl-3" onclick="window.view.addOtherList()">
         <i class="fas fa-plus"></i>
-        <span class="">Añada otra lista</span>
+        <span>Añada otra lista</span>
       </button>`;
 };
 
@@ -127,18 +128,19 @@ window.view.addOtherList = () => {
 };
 
 
-window.view.addCard = () => {
-  let divAddCard = document.getElementById('addCard');
+window.view.addCard = (id, nc) => {
+  let divAddCard = document.getElementById('a' + id);
+
   divAddCard.innerHTML =
     `<div class="col-12 px-2" id="addTextCard">
     </div>
     <div class="col-12 p-0" id="closeOtherCard">
       <div class="col-12 px-2">
-        <textarea name="TitleCard" id="firstCard" class="form-font-size textarea-card p-1" cols="28" rows="3" placeholder="Introduzca un título para esta tarjeta..."></textarea>
+        <textarea name="TitleCard" id="${nc}${id}" class="form-font-size textarea-card p-1" cols="28" rows="3" placeholder="Introduzca un título para esta tarjeta..."></textarea>
       </div>
       <div class="row mx-0">
         <div class="col-auto px-2 pb-2">
-          <button type="button" class="btn btn-success form-font-size font-weight-bold py-1" onclick="window.controller.addCard()">Añadir tarjeta</button>
+          <button type="button" class="btn btn-success form-font-size font-weight-bold py-1" onclick="window.controller.dataCard('${id}','${nc}${id}')">Añadir tarjeta</button>
         </div>
         <div class="col-auto pl-1 pt-1" style="margin-right: 62px">
           <button type="button" class="close" onclick="window.view.otherCard()">
@@ -170,7 +172,7 @@ window.view.otherCard = () => {
     `<div class="col-12 p-0">
       <button type="button" class="btn-list text-left" onclick="window.view.newCard()">
         <i class="fas fa-plus"></i>
-        <span class="">Añada otra tarjeta</span>
+        <span>Añada otra tarjeta</span>
       </button>
     </div>`;
 }
